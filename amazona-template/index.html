@@ -10,6 +10,9 @@
     <div class="grid-container">
         <header class="header">
             <div class="brand">
+                <button onclick="openmenu()">
+                    &#9776;
+                </button>
                 <a href="index.html">amazona</a>
             </div>
             <div class="header-links">
@@ -17,6 +20,19 @@
                 <a href="signin.html">SIGNIN</a>
             </div>
         </header>
+        <aside class="sidebar">
+            <h3>Shopping Categories</h3>
+            <button class="sidebar-close-button" onclick="closeMenu()">x</button>
+            <ul>
+                <li>
+                    <a href="index.html">pants</a>
+                </li>
+                <li>
+                    <a href="index.html">shirts</a>
+                </li>
+            </ul>
+
+        </aside>
         <main class="main">
             <div class="content">
                 <ul class="products">
@@ -90,6 +106,14 @@
         </footer>
 
     </div>
+    <script>
+        function openmenu(){
+            document.querySelector(".sidebar").classList.add("open");
+        }
+        function closeMenu(){
+            document.querySelector(".sidebar").classList.remove("open")
+        }
+    </script>
     
 </body>
 </html>
